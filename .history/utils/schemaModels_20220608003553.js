@@ -11,22 +11,14 @@ const ItemSchema = new Schema({
 });
 
 const UserSchema = new Schema({
-    name: {
-        type: String,
-        required: true,
-    },
+    name: string,
     email: {
         type: String,
         required: true,
         unique: true,
     },
-    password: {
-        type: String,
-        required: true,
-    },
+    password: string,
 });
 
 export const ItemModel =
     mongoose.models.Item || mongoose.model("Item", ItemSchema);
-export const UserModel =
-    mongoose.models.User || mongoose.model("User", UserSchema);
