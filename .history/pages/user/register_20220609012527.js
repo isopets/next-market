@@ -20,7 +20,6 @@ const Register = () => {
         }),
       });
       const jsonData = await response.json();
-      alert(jsonData.message);
     } catch (err) {
       alert("ユーザー登録失敗");
     }

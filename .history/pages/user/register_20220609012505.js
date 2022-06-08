@@ -19,8 +19,7 @@ const Register = () => {
           password: password,
         }),
       });
-      const jsonData = await response.json();
-      alert(jsonData.message);
+      const jsonData = response.json();
     } catch (err) {
       alert("ユーザー登録失敗");
     }

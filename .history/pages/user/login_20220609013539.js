@@ -1,42 +1,30 @@
-import {useState} from "react";
-
-const Register = () => {
-  const [name, setName] = useState("");
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = async e => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+      e.pre
     try {
-      const response = await fetch("http://localhost:3000/api/user/register", {
+      const response = await fetch("http://localhost:3000/api/user/login", {
         method: "POST",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: name,
           email: email,
           password: password,
         }),
       });
       const jsonData = await response.json();
-      alert(jsonData.message);
+      aleart(jsonData.message);
     } catch (err) {
-      alert("ユーザー登録失敗");
+      aleart("ログイン失敗");
     }
   };
   return (
     <div>
-      <h1> ユーザー登録 </h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          value={name}
-          onChange={e => setName(e.target.value)}
-          type="text"
-          name="name"
-          placeholder="名前"
-          required
-        />
+      <h1>ログイン</h1>
+      <form>
         <input
           value={email}
           onChange={e => setEmail(e.target.value)}
@@ -53,10 +41,10 @@ const Register = () => {
           placeholder="パスワード"
           required
         />
-        <button> 登録 </button>{" "}
+        <button>ログイン</button>
       </form>
     </div>
   );
 };
 
-export default Register;
+export default Login;

@@ -4,10 +4,10 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = async e => {
+  const handleSubmit =async( e => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/user/register", {
+      const response = fetch("http://localhost:3000/api/user/register", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -19,8 +19,7 @@ const Register = () => {
           password: password,
         }),
       });
-      const jsonData = await response.json();
-      alert(jsonData.message);
+      const jsonData = response.json();
     } catch (err) {
       alert("ユーザー登録失敗");
     }
