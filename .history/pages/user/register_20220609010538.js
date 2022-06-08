@@ -4,8 +4,7 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = () => {
     try {
       fetch("http://localhost:3000/api/user/register", {
         method: "POST",
@@ -13,20 +12,25 @@ const Register = () => {
           Accept: "application/json",
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-        }),
+        body: "ダミーデータ",
       });
-    } catch (err) {
-      alert("ユーザー登録失敗");
-    }
+    } catch (err) {}
   };
   return (
     <div>
       <h1> ユーザー登録 </h1>
       <form onSubmit={handleSubmit}>
+        <input
+          value={name}
+          onChange={e => {
+            setName(e.target.value);
+            
+          }}
+          type="text"
+          name="name"
+          placeholder="名前"
+          required
+        />
         <input
           value={name}
           onChange={e => setName(e.target.value)}
