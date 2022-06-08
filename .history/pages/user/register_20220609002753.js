@@ -2,8 +2,7 @@ import {useState} from "react";
 
 const Register = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  console.log(name);
   const handleSubmit = () => {
     try {
       fetch("http://localhost:3000/api/user/register", {
@@ -22,10 +21,7 @@ const Register = () => {
       <form onSubmit={handleSubmit}>
         <input
           value={name}
-          onChange={e => {
-            setName(e.target.value);
-            console.log(e);
-          }}
+          onChange={e => setName(e.target.value)}
           type="text"
           name="name"
           placeholder="名前"
