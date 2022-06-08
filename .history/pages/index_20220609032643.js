@@ -6,8 +6,6 @@ const ReadAllItems = () => {
   );
 };
 
-export const getServerSideProps = () => {
-  const response = fetch("http://localhost:3000/api/item/readall");
-};
+export const getServerSideProps = () => {};
 
 export default ReadAllItems;
