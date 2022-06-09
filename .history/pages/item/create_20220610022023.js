@@ -5,12 +5,12 @@ const CreateItem = () => {
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => 
 
   return (
     <div>
       <h1>アイテム作成</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <input
           value={title}
           onChange={e => setTitle(e.target.value)}
