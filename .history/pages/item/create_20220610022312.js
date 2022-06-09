@@ -6,9 +6,11 @@ const CreateItem = () => {
   const [description, setDescription] = useState("");
 
   const handleSubmit = () => {
+
     try {
-      fetch("");
-    } catch (err) {}
+        fetch("")
+    }catch (err){
+    }
   };
 
   return (
