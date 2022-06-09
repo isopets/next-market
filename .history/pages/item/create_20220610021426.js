@@ -2,9 +2,7 @@ import {useState} from "react";
 const CreateItem = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
-  const [description, setDiscription] = useState("");
-
+  const [image, setImage]
   return (
     <div>
       <h1>アイテム作成</h1>

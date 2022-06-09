@@ -1,13 +1,8 @@
-import {useState} from "react";
 const CreateItem = () => {
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
-  const [description, setDiscription] = useState("");
-
   return (
     <div>
       <h1>アイテム作成</h1>
+      // ↓追加
       <form>
         <input type="text" name="title" placeholder="アイテム名" required />
         <input type="text" name="price" placeholder="価格" required />
@@ -20,6 +15,7 @@ const CreateItem = () => {
           required></textarea>
         <button>作成</button>
       </form>
+      // ↑追加
     </div>
   );
 };
