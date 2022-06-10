@@ -1,6 +1,6 @@
 import Image from "next/image";
 const ReadSingleItem = props => {
-  return 
+  return
   <div>
     <div>
       <Image
@@ -22,7 +22,7 @@ const ReadSingleItem = props => {
 export default ReadSingleItem;
 export const getServerSideProps = async context => {
   const response = await fetch(
-    `http://localhost:3000/api/item/${context.query.id}`
+    `https://next-market-fullstack-app.vercel.app//api/item/${context.query.id}`
   );
   const singleItem = await response.json();
 

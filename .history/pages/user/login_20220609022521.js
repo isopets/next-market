@@ -5,7 +5,7 @@ const Login = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = awt fetch("http://localhost:3000/api/user/login", {
+      const response = awt fetch("https://next-market-fullstack-app.vercel.app//api/user/login", {
         method: "POST",
         headers: {
           Accept: "application/json",

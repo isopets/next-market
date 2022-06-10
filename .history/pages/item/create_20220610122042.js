@@ -9,7 +9,7 @@ const CreateItem = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/item/create", {
+      const response = await fetch("https://next-market-fullstack-app.vercel.app//api/item/create", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -29,7 +29,7 @@ const CreateItem = () => {
       alert("アイテム作成失敗");
     }
   };
-  const loginUser = 
+  const loginUser =
 
   return (
     <div>

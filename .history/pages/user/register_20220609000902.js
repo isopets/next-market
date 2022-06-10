@@ -1,7 +1,7 @@
 const Register = () => {
   const handleSubmit = () => {
     try{
-        fetch("http://localhost:3000/api/user/register", {
+        fetch("https://next-market-fullstack-app.vercel.app//api/user/register", {
             // ↓追加
             method: "POST",
             headers: {
@@ -9,7 +9,7 @@ const Register = () => {
                 "Content-Type": "application/json"
             },
             // ↑追加
-            body:"ダミーデータ" 
+            body:"ダミーデータ"
           })
     }catch(err){
 

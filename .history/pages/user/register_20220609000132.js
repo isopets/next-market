@@ -1,9 +1,9 @@
 const Register = () => {
   const handleSubmit = () => {
     try {
-      fetch("http://localhost:3000/api/user/register", (
+      fetch("https://next-market-fullstack-app.vercel.app//api/user/register", (
         method: String,headers:
-        
+
       ));
     } catch (err) {}
   };

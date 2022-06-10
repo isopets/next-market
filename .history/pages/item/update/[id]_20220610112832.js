@@ -10,7 +10,7 @@ const UpdateItem = props => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-        const response = await fetch(`https://nextjs-book-fullstack-app.vercel.app/api/item/update/${props.singleItem._id}`, { 
+        const response = await fetch(`https://nextjs-book-fullstack-app.vercel.app/api/item/update/${props.singleItem._id}`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -76,7 +76,7 @@ export default UpdateItem;
 
 export const getServerSideProps = async context => {
   const response = await fetch(
-    `http://localhost:3000/api/item/${context.query.id}`
+    `https://next-market-fullstack-app.vercel.app//api/item/${context.query.id}`
   );
   const singleItem = await response.json();
 

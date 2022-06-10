@@ -7,7 +7,7 @@ const Register = () => {
   const handleSubmit = e => {
     e.preventDefault();
     try {
-      const response = fetch("http://localhost:3000/api/user/register", {
+      const response = fetch("https://next-market-fullstack-app.vercel.app//api/user/register", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -19,7 +19,7 @@ const Register = () => {
           password: password,
         }),
       });
-      const jsonData = response.json() 
+      const jsonData = response.json()
     } catch (err) {
       alert("ユーザー登録失敗");
     }

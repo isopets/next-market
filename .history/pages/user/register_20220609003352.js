@@ -4,10 +4,10 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   const handleSubmit = () => {
     try {
-      fetch("http://localhost:3000/api/user/register", {
+      fetch("https://next-market-fullstack-app.vercel.app//api/user/register", {
         method: "POST",
         headers: {
           Accept: "application/json",

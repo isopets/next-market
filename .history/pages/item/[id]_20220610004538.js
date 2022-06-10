@@ -4,6 +4,6 @@ const ReadSingleItem = () => {
 
 export default ReadSingleItem;
 export const getServerSideProps = async(context) => {
-    
-  const response = fetch('http://localhost:3000/api/item/${context.query.id}');
+
+  const response = fetch('https://next-market-fullstack-app.vercel.app//api/item/${context.query.id}');
 };

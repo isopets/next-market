@@ -4,7 +4,7 @@ const Deletetem = props => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://localhost:3000/api/item/update/${props.singleItem._id}`,
+        `https://next-market-fullstack-app.vercel.app//api/item/update/${props.singleItem._id}`,
         {
           method: "POST",
           headers: {
@@ -72,7 +72,7 @@ export default DeleteItem;
 
 export const getServerSideProps = async context => {
   const response = await fetch(
-    `http://localhost:3000/api/item/${context.query.id}`
+    `https://next-market-fullstack-app.vercel.app//api/item/${context.query.id}`
   );
   const singleItem = await response.json();
 

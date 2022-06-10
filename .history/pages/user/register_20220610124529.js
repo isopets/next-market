@@ -8,7 +8,7 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/user/register", {
+      const response = await fetch("https://next-market-fullstack-app.vercel.app//api/user/register", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -59,7 +59,7 @@ import Head from "next/head"
                 <div className="texts-area">
                     <h2>¥{item.price}</h2>
                     <h3>{item.title}</h3>
-                    
+
       <form onSubmit={handleSubmit}>
         <input
           value={name}

@@ -7,7 +7,7 @@ const CreateItem = () => {
 
   const handleSubmit = () => {
     try {
-      const response = fetch("http://localhost:3000/api/item/create", {
+      const response = fetch("https://next-market-fullstack-app.vercel.app//api/item/create", {
         method: "POST",
         headers: {
           Accept: "application/json",

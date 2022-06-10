@@ -4,17 +4,19 @@ const Login = () => {
     const handleSubmit = async e => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:3000/api/user/login", {
-                method: "POST",
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    email: email,
-                    password: password,
-                }),
-            });
+            const response = await fetch(
+                "https://next-market-fullstack-app.vercel.app//api/user/login", {
+                    method: "POST",
+                    headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password,
+                    }),
+                }
+            );
             const jsonData = await response.json();
             alert(jsonData.message);
         } catch (err) {
@@ -24,7 +26,7 @@ const Login = () => {
     return ( <
         div >
         <
-        h1 > ログイン < /h1> <
+        h1 > ログイン < /h1>{" "} <
         form >
         <
         input value = { email }
@@ -43,8 +45,8 @@ const Login = () => {
         required /
         >
         <
-        button > ログイン < /button> <
-        /form> <
+        button > ログイン < /button>{" "} <
+        /form>{" "} <
         /div>
     );
 };

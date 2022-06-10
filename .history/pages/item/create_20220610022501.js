@@ -7,7 +7,7 @@ const CreateItem = () => {
 
   const handleSubmit = () => {
     try {
-      fetch("http://localhost:3000/api/");
+      fetch("https://next-market-fullstack-app.vercel.app//api/");
     } catch (err) {}
   };
 
