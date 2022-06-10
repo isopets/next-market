@@ -40,10 +40,7 @@ const UpdateItem = props => {
   if (loginUser === props.singleItem.email) {
     return (
       <div>
-        <Head>
-          <title>アイテム編集</title>
-        </Head>
-        <h1 className="page-title">アイテム編集</h1>
+        <h1>アイテム編集</h1>
         <form onSubmit={handleSubmit}>
           <input
             value={title}

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import useAuth from "../../utils/useAuth";
-import Head from "next/head";
+import Head from "next/head"
 const CreateItem = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -34,11 +34,9 @@ const CreateItem = () => {
   if (loginUser) {
     return (
       <div>
-        <Head>
-          <title>アイテム作成</title>
-        </Head>
-        <h1 className="page-title">アイテム作成</h1>
-        <form onSubmit={handleSubmit}>
+<Head><title>アイテム作成</title></Head>
+    <h1 className="page-title">アイテム作成</h1>
+    <form onSubmit={handleSubmit}>
           <input
             value={title}
             onChange={e => setTitle(e.target.value)}

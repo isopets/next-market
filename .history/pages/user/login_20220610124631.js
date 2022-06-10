@@ -1,4 +1,3 @@
-import {useState} from "react";
 import Head from "next/head";
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,10 +25,7 @@ const Login = () => {
   };
   return (
     <div>
-      <Head>
-        <title>ログイン</title>
-      </Head>
-      <h1 className="page-title">ログイン</h1>
+      <h1> ログイン </h1>
       <form onSubmit={handleSubmit}>
         <input
           value={email}

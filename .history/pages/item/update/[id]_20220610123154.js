@@ -1,6 +1,5 @@
 import {useState} from "react";
 import useAuth from "../../../utils/useAuth";
-import Head from "next/head";
 const UpdateItem = props => {
   const [title, setTitle] = useState("props.singleItem.title");
   const [price, setPrice] = useState("props.singleItem.price");
@@ -40,10 +39,7 @@ const UpdateItem = props => {
   if (loginUser === props.singleItem.email) {
     return (
       <div>
-        <Head>
-          <title>アイテム編集</title>
-        </Head>
-        <h1 className="page-title">アイテム編集</h1>
+        <h1>アイテム編集</h1>
         <form onSubmit={handleSubmit}>
           <input
             value={title}

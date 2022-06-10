@@ -28,10 +28,38 @@ const Register = () => {
   };
   return (
     <div>
-      <Head>
-        <title>ユーザー登録</title>
-      </Head>
-      <h1 className="page-title">ユーザー登録</h1>
+    <Head><title>ユーザー登録</title></Head>
+    <h1 className="page-title">ユーザー登録</h1>
+    <form onSubmit={handleSubmit}>
+    ...
+// pages/item/login
+
+import Head from "next/head"
+
+...
+
+<div>
+    <Head><title>ログイン</title></Head>
+    <h1 className="page-title">ログイン</h1>
+    <form onSubmit={handleSubmit}>
+    ...
+// pages/index.js
+
+import Head from "next/head"
+
+...
+
+<div>
+    <Head><title>Next Market</title></Head>
+    <div className="grid-container-in">
+    {props.allItems.map(item =>
+        <Link href={`/item/${item._id}`} key={item._id}>
+            <a className="card">
+                <Image src={item.image} width="750px" height="500px" alt="item-image"/>
+                <div className="texts-area">
+                    <h2>¥{item.price}</h2>
+                    <h3>{item.title}</h3>
+                    
       <form onSubmit={handleSubmit}>
         <input
           value={name}
