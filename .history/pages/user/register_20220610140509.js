@@ -10,7 +10,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://next-market-fullstack-app.vercel.app/api/user/register",
+        "https://nextjs-book-fullstack-app.vercel.app/api/user/register",
         {
           method: "POST",
           headers: {

@@ -12,7 +12,7 @@ const CreateItem = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://next-market-fullstack-app.vercel.app/api/item/create",
+        "https://nextjs-book-fullstack-app.vercel.app/api/item/create",
         {
           method: "POST",
           headers: {
