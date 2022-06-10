@@ -1,33 +1,16 @@
 import {useState} from "react";
-import useAuth from "../../utils/useAuth";
 const CreateItem = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = async e => {
-    e.preventDefault();
+  const handleSubmit = () => {
     try {
-      const response = await fetch("http://localhost:3000/api/item/create", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-type": "application/json",
-          authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify({
-          title: title,
-          price: price,
-          image: image,
-          description: description,
-        }),
+      fetch("http://localhost:3000/api/item/create",{
+          method: "POST"
       });
-      const jsonData = await response.json();
-      alert(jsonData.message);
-    } catch (err) {
-      alert("アイテム作成失敗");
-    }
+    } catch (err) {}
   };
 
   return (
@@ -44,7 +27,7 @@ const CreateItem = () => {
         />
         <input
           value={price}
-          onChange={e => setPrice(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
           type="text"
           name="price"
           placeholder="価格"
@@ -52,7 +35,7 @@ const CreateItem = () => {
         />
         <input
           value={image}
-          onChange={e => setImage(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
           type="text"
           name="image"
           placeholder="画像"
@@ -60,7 +43,7 @@ const CreateItem = () => {
         />
         <textarea
           value={description}
-          onChange={e => setDescription(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
           type="text"
           name="description"
           rows="15"

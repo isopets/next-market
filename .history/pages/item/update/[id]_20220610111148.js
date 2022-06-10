@@ -1,7 +1,6 @@
 import {useState} from "react";
-import useAuth from "../../utils/useAuth";
-const CreateItem = () => {
-  const [title, setTitle] = useState("");
+const UpdateItem = props => {
+  const [title, setTitle] = useState("props.single");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
@@ -71,5 +70,15 @@ const CreateItem = () => {
     </div>
   );
 };
+export default UpdateItem;
 
-export default CreateItem;
+export const getServerSideProps = async context => {
+  const response = await fetch(
+    `http://localhost:3000/api/item/${context.query.id}`
+  );
+  const singleItem = await response.json();
+
+  return {
+    props: singleItem,
+  };
+};

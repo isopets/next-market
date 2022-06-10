@@ -1,5 +1,4 @@
 import {useState} from "react";
-import useAuth from "../../utils/useAuth";
 const CreateItem = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -52,7 +51,7 @@ const CreateItem = () => {
         />
         <input
           value={image}
-          onChange={e => setImage(e.target.value)}
+          onChange={e => set(e.target.value)}
           type="text"
           name="image"
           placeholder="画像"
@@ -60,7 +59,7 @@ const CreateItem = () => {
         />
         <textarea
           value={description}
-          onChange={e => setDescription(e.target.value)}
+          onChange={e => setTitle(e.target.value)}
           type="text"
           name="description"
           rows="15"

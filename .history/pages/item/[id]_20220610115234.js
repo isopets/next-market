@@ -17,13 +17,9 @@ const ReadSingleItem = props => {
       <hr />
       <p>{props.singleItem.description}</p>
       <div>
-        <Link href={`/item/update/${props.singleItem._id}`}>
-          <a>アイテム編集</a>
-        </Link>
-        <Link href={`/item/delete/${props.singleItem._id}`}>
-          <a>アイテム削除</a>
-        </Link>
-      </div>
+                    <Link href={`/item/update/${props.singleItem._id}`}><a>アイテム編集</a></Link>
+                    <Link href={`/item/delete/${props.singleItem._id}`}><a>アイテム削除</a></Link>
+                </div>
     </div>
   </div>;
 };

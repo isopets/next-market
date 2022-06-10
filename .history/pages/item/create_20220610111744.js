@@ -1,5 +1,4 @@
 import {useState} from "react";
-import useAuth from "../../utils/useAuth";
 const CreateItem = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
